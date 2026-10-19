@@ -2,45 +2,59 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float playerPositionX = -2.35f;
-    private float playerPositionY = -5.88f;
+    [SerializeField] private Bullet bulletPrefab;
+    [SerializeField] private Transform firePoint;
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private GameObject player;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float maxSpeed;
+    private float moveSpeed = 600;
+    private float playerDamage = 20f;
     private Rigidbody2D rb;
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+           Bullet bullet= Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+           bullet.Shoot(Mathf.Sign(transform.right.x));
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+           
+            rb.AddForce(Vector2.right * (moveSpeed * Time.deltaTime), ForceMode2D.Force);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            
+            rb.AddForce(Vector2.left * (moveSpeed * Time.deltaTime), ForceMode2D.Force);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+           transform.right = Vector3.right;
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.right = Vector3.left;
+        }
+    }
+    public void PowerUpDamage(float value)
+    {
+        playerDamage += value;
+        if (playerDamage > 50)
+        {
+            playerDamage = 50;
+        }
+    }
+    public float GetDamage()
+    {
+        return playerDamage;
+    }
     private void Start()
     {
         moveSpeed = data.moveSpeed;
     }
-    public void PowerUpMoveSpeed(float value)
-    {
-        moveSpeed += value;
-    }
-
-    public float GetMoveSpeed()
-    {
-        return moveSpeed;
-    }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-    private void FixedUpdate()
-    {
-        rb.AddForce(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
-
-        float velocityX = Mathf.Clamp(rb.linearVelocity.x, 0f, maxSpeed);
-
-        rb.linearVelocity = new Vector2 (velocityX, rb.linearVelocity.y);
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("LoopWall"))
-        {
-            player.transform.position = new Vector2(playerPositionX, playerPositionY);
-
-        }
     }
 }

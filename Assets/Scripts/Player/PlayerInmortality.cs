@@ -7,10 +7,7 @@ public class PlayerInmortality : MonoBehaviour
     [SerializeField] private GameObject playerLife1;
     [SerializeField] private GameObject playerLife2;
     [SerializeField] private GameObject playerLife3;
-    [SerializeField] private GameObject powerUpInmortality;
-    [SerializeField] private GameObject powerUpSpeed;
-    [SerializeField] private GameObject powerUpJump;
-    [SerializeField] private TrailRenderer invencibilityTrail;
+    [SerializeField] private GameObject powerUpDamage;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private GameObject gameOverPanel;
     private int playerLives = 1;
@@ -67,10 +64,6 @@ public class PlayerInmortality : MonoBehaviour
         return isInmortal;
     }
 
-    public void InmortalityTrail(bool inmortalTrail)
-    {
-        invencibilityTrail.enabled = inmortalTrail;
-    }
 
     public void DeathParticles(bool enableParticles)
     {
@@ -79,19 +72,10 @@ public class PlayerInmortality : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PowerUp"))
+        if (collision.gameObject.CompareTag("PowerUpDamage"))
         {
-            Destroy(powerUpInmortality, 1f);
+            Destroy(powerUpDamage, 1f);
         }
-        else if (collision.gameObject.CompareTag("PowerUpSpeed"))
-        {
-            Destroy(powerUpSpeed, 1f);
-        }
-        else if (collision.gameObject.CompareTag("PowerUpJump"))
-        {
-            Destroy(powerUpJump, 1f);
-        }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
