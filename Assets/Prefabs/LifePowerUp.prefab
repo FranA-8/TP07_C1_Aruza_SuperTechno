@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 447926653892412510, guid: f1bb3252acd015e439d13e93cc5bc8a8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -196,7 +196,6 @@ MonoBehaviour:
   spawnTimer: 15
   despawnTimer: 6
   powerUpPositionY: -1
-  powerUpPositionX: 35
 --- !u!58 &6800927120977928280
 CircleCollider2D:
   m_ObjectHideFlags: 0

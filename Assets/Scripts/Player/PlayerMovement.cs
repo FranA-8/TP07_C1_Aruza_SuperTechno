@@ -7,8 +7,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private GameObject player;
     private float moveSpeed = 600;
-    private float playerDamage = 20f;
     private Rigidbody2D rb;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    private void Start()
+    {
+        moveSpeed = data.moveSpeed;
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -37,24 +44,5 @@ public class PlayerMovement : MonoBehaviour
             transform.right = Vector3.left;
         }
     }
-    public void PowerUpDamage(float value)
-    {
-        playerDamage += value;
-        if (playerDamage > 50)
-        {
-            playerDamage = 50;
-        }
-    }
-    public float GetDamage()
-    {
-        return playerDamage;
-    }
-    private void Start()
-    {
-        moveSpeed = data.moveSpeed;
-    }
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+
 }

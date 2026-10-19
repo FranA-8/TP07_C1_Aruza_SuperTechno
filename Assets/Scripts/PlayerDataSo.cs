@@ -12,5 +12,8 @@ public class PlayerDataSo : ScriptableObject
 
     [Header("Lives")]
     [Range(0, 3)] public int playerLives = 1;
-    
+
+    [Header("Damage")]
+    public float damage = 20f;
+
 }

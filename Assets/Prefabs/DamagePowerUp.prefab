@@ -63,7 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeedPowerUpManager
   animator: {fileID: 8613106243299263450}
   powerUpPrefab: {fileID: 6692387595631140010}
-  bullet: {fileID: 3705939670658880111, guid: 276941f1500b9114fb45c3ba6b536373, type: 3}
+  data: {fileID: 11400000, guid: b9119af97be23b24a8c804fdefa51d72, type: 2}
 --- !u!114 &3029192294650265825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   player: {fileID: 0}
   powerUpPrefab: {fileID: 6692387595631140010}
   spawnTimer: 10
-  despawnTimer: 5
+  despawnTimer: 4
   powerUpPositionY: -6
 --- !u!58 &6589575436903280389
 CircleCollider2D:
@@ -297,7 +297,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 9163179789190762368, guid: 9f6f1e44c5d34b8458a7fe1522ffa268, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

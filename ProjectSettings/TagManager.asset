@@ -9,8 +9,7 @@ TagManager:
   - ParalaxBackground3
   - Obstacle
   - PowerUp
-  - LoopWall
-  - PowerUpSpeed
+  - PowerUpDamage
   - PowerUpJump
   layers:
   - Default
