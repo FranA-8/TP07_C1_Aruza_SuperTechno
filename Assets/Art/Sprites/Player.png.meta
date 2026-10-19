@@ -3,11 +3,11 @@ guid: 2d89d0ed4cced5a42b6400f880ce91ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8762032217062444704
-    second: "Mech-walk-200\xD7150px-sprites_0"
+      213: -2311659948842064771
+    second: Player_0
   - first:
-      213: 1714962070608244866
-    second: "Mech-walk-200\xD7150px-sprites_1"
+      213: 7364682651488144517
+    second: Player_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Mech-walk-200\xD7150px-sprites_0"
+      name: Player_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 81
-        width: 133
-        height: 71
+        x: 3
+        y: 37
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ae0980d0edf89970800000000000000
-      internalID: 8762032217062444704
+      spriteID: d7465c336855befd0800000000000000
+      internalID: -2311659948842064771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Mech-walk-200\xD7150px-sprites_1"
+      name: Player_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 10
-        width: 97
-        height: 72
+        x: 6
+        y: 8
+        width: 41
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2807fddbae4ccc710800000000000000
-      internalID: 1714962070608244866
+      spriteID: 58cce6d0adb943660800000000000000
+      internalID: 7364682651488144517
       vertices: []
       indices: 
       edges: []
@@ -199,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Mech-walk-200\xD7150px-sprites_0": 8762032217062444704
-      "Mech-walk-200\xD7150px-sprites_1": 1714962070608244866
+      Player_0: -2311659948842064771
+      Player_1: 7364682651488144517
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

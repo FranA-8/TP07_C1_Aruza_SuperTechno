@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSo
   jumpForce: 17
-  moveSpeed: 700
+  moveSpeed: 800
   playerLives: 1
+  damage: 20

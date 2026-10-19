@@ -10,6 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float spawnTimer = 3;
     [SerializeField] private float despawnTimer = 10;
+    [SerializeField] private ParticleSystem deathParticles;
     private float enemyPositionY = -6f;
     private float timer;
 
@@ -18,18 +19,23 @@ public class EnemyBehaviour : MonoBehaviour
         healthBar.fillAmount = 1f;
         health = maxHealth;
     }
+    public void DeathParticles(bool enableParticles)
+    {
+        deathParticles.Play();
+    }
     public void DoDamage(float amount)
     {
         health -= amount;
         healthBar.fillAmount = health / maxHealth;
         if (health <= 0)
         {
+            deathParticles.Play();
             Die();
         }
     }
     private void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 
     private void Update()

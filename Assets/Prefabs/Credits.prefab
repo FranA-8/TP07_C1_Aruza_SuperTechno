@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Art: Itch.io : SunGraphica\t\tCrimsonEye Assets\n\tfree-game-assets\tAralepixel\n\tWenrexa"
+  m_text: "Art: Itch.io : SunGraphica\t\tCrimsonEye Assets\n\tfree-game-assets\tAralepixel\n\tWenrexa\tcreativekind"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a66c7295d0292004eb5ca06fef1a5d1d, type: 2}
   m_sharedMaterial: {fileID: -1548390061135998847, guid: a66c7295d0292004eb5ca06fef1a5d1d, type: 2}
