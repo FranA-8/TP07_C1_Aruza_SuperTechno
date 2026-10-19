@@ -1,10 +1,11 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UiGameOverMenu : MonoBehaviour
 {
+    private AudioSource audioSource;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Button tryAgainButton;
     [SerializeField] private Button exitButton;
@@ -15,6 +16,7 @@ public class UiGameOverMenu : MonoBehaviour
     {
         tryAgainButton.onClick.AddListener(OnTryAgainButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy()

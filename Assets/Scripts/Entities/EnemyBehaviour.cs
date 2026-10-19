@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    private AudioSource audioSource;
     [SerializeField] private float maxHealth = 100f;
     private float health = 0f;
     [SerializeField] private Image healthBar;
@@ -14,15 +15,17 @@ public class EnemyBehaviour : MonoBehaviour
     private float enemyPositionY = -6f;
     private float timer;
 
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         healthBar.fillAmount = 1f;
         health = maxHealth;
     }
-    public void DeathParticles(bool enableParticles)
-    {
-        deathParticles.Play();
-    }
+
     public void DoDamage(float amount)
     {
         health -= amount;
@@ -30,6 +33,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (health <= 0)
         {
             deathParticles.Play();
+            audioSource.Play();
             Die();
         }
     }

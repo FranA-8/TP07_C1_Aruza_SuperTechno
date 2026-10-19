@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerSounds playerSounds;
     [SerializeField] private Animator animator;
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform firePoint;
@@ -12,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSounds = GetComponent<PlayerSounds>();
     }
     private void Start()
     {
@@ -23,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
         {
            Bullet bullet= Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
            bullet.Shoot(Mathf.Sign(transform.right.x));
+
+           playerSounds.PlayShootSound();
         }
 
         if (Input.GetKey(KeyCode.D))

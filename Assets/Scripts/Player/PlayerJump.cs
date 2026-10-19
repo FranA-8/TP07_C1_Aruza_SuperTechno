@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerJump : MonoBehaviour
 {
+    private PlayerSounds playerSounds;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private GameObject player;
@@ -12,6 +14,7 @@ public class PlayerJump : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSounds = GetComponent<PlayerSounds>();
     }
 
     private void Start()
@@ -53,7 +56,9 @@ public class PlayerJump : MonoBehaviour
             canJump = false;
 
             animator.SetTrigger("Jumped");
-          }
+
+            playerSounds.PlayJumpSound();
+        }
 
     }   
 }

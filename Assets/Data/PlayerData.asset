@@ -15,4 +15,4 @@ MonoBehaviour:
   jumpForce: 17
   moveSpeed: 800
   playerLives: 1
-  damage: 20
+  damage: 40

@@ -64,12 +64,6 @@ public class PlayerInmortality : MonoBehaviour
         return isInmortal;
     }
 
-
-    public void DeathParticles(bool enableParticles)
-    {
-        deathParticles.Play();
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUpDamage"))
@@ -107,6 +101,7 @@ public class PlayerInmortality : MonoBehaviour
                 playerLife1.SetActive(true);
                 Time.timeScale = 0f;
                 gameOverPanel.SetActive(true);
+                playerLives--;
             }
         }
     }
