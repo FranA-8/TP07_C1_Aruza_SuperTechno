@@ -1,22 +1,34 @@
-# CyberRunner
+# SuperTechno
 
-A 2D endless runner game developed in Unity using C#.
+A 2D platformer game developed in Unity using C#.
 
-The player must navigate through obstacles, collect power-ups, and survive for as long as possible while maintaining control of their character.
+The player can jump, shoot enemies, collect items, and use power-ups to survive and progress through the level.
 
 ## Controls
 
-Space Bar - Jump
+- **Space Bar** – Jump
+- **Left Mouse Button** – Shoot
 
 ## Power-Ups
 
-Speed Power-Up: Gives the player a speed boost for a limited amount of time.
+- **Health Power-Up:** Gives the player one extra life.
+- **Damage Power-Up:** Increases the player's damage.
 
-Jump Boost Power-Up: Gives the player a jump boost for a limited amount of time.
+## Enemies
 
-Life Power-Up: Gives the player an extra life, allowing them to survive an additional hit.
+Enemies have health bars and can be defeated by shooting them.
 
-Invincibility Power-Up: Makes the player invulnerable for a limited amount of time.
+## Collectibles
+
+Collectible items can be found throughout the level.
+
+## Features
+
+- 2D platformer gameplay inspired by classic games like Super Mario.
+- Jumping and shooting mechanics.
+- Two different power-ups.
+- Enemies with health bars.
+- Collectible items and a scoring system.
 
 ## Developer
 
